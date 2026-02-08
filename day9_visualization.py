@@ -1,0 +1,25 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df= pd.read_csv("marks1.csv")
+df_fill = df.fillna(0)
+print(df_fill)
+df_fill["total"] = df_fill["maths"] + df_fill["physics"] + df_fill["chemistry"]
+print(df_fill.sort_values(by="total", ascending=False))
+plt.plot(df_fill["name"],df_fill["maths"])
+plt.xlabel("Student")
+plt.ylabel("Maths Marks")
+plt.title("Maths marks of student")
+plt.show()
+plt.bar(df_fill["name"], df_fill["total"])
+plt.title("Total Marks by Student")
+plt.show()
+plt.plot(df_fill["name"], df_fill["physics"])
+plt.show()
+plt.hist(df["maths"])
+plt.title("Maths Marks Distribution")
+plt.show()
+avg_marks = df[["maths", "physics", "chemistry"]].mean()
+
+avg_marks.plot(kind="bar")
+plt.title("Average Marks per Subject")
+plt.show()
