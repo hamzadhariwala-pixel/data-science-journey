@@ -1,9 +1,4 @@
-name,physics,maths,chemistry
-Hamza,78,56,90
-Ali,49,57,50
-Sara,56,81,86
-Bhela,56,40,69
-Aadam,40,89,87
-kutub,81,55,81
-shabbir,55,49,38
-babu,35,36,12
+,Name,Physics,Physics.1,Chemistry
+0,Hamza,78,56.0,90.0
+1,Ali,49,,50.0
+2,Sara,56,81.0,
